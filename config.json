@@ -1,0 +1,116 @@
+{
+  "data": [
+    {
+      "id": "concepts",
+      "label": "Datos",
+      "elements": [
+        {
+          "id": "metricActual",
+          "type": "METRIC",
+          "label": "Valor actual",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "metricObjetivo",
+          "type": "METRIC",
+          "label": "Objetivo",
+          "options": { "min": 0, "max": 1 }
+        },
+        {
+          "id": "metricFaltante",
+          "type": "METRIC",
+          "label": "Faltante (opcional, si no lo agregas se calcula solo)",
+          "options": { "min": 0, "max": 1 }
+        }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "id": "titleSection",
+      "label": "Título del gráfico",
+      "elements": [
+        { "id": "showTitle", "type": "CHECKBOX", "label": "Mostrar título", "defaultValue": true },
+        { "id": "titleText", "type": "TEXTINPUT", "label": "Texto del título", "defaultValue": "Ventas netas vs objetivo", "placeholderText": "Ej: Ventas netas vs objetivo" }
+      ]
+    },
+    {
+      "id": "formatSection",
+      "label": "Formato del valor",
+      "elements": [
+        {
+          "id": "valueFormat",
+          "type": "SELECT_SINGLE",
+          "label": "Tipo de formato",
+          "options": [
+            { "label": "Moneda ($1.234)", "value": "moneda" },
+            { "label": "Número (1.234)", "value": "numero" },
+            { "label": "Porcentaje (12,3%)", "value": "porcentaje" },
+            { "label": "Fracción (19 / 50)", "value": "fraccion" }
+          ],
+          "defaultValue": "moneda"
+        },
+        { "id": "currencySymbol", "type": "TEXTINPUT", "label": "Símbolo de moneda", "defaultValue": "$", "placeholderText": "$" },
+        {
+          "id": "decimalPlaces",
+          "type": "SELECT_SINGLE",
+          "label": "Decimales",
+          "options": [
+            { "label": "0", "value": "0" },
+            { "label": "1", "value": "1" },
+            { "label": "2", "value": "2" }
+          ],
+          "defaultValue": "0"
+        },
+        { "id": "unitLabel", "type": "TEXTINPUT", "label": "Etiqueta de unidad (opcional, ej: clientes)", "defaultValue": "", "placeholderText": "clientes" }
+      ]
+    },
+    {
+      "id": "subtitleSection",
+      "label": "Subtítulo",
+      "elements": [
+        { "id": "showSubtitle", "type": "CHECKBOX", "label": "Mostrar subtítulo", "defaultValue": true },
+        {
+          "id": "subtitleTemplate",
+          "type": "TEXTINPUT",
+          "label": "Texto de subtítulo (usa {objetivo} {faltante} {actual} {pct})",
+          "defaultValue": "Objetivo {objetivo} · faltan {faltante}",
+          "placeholderText": "Objetivo {objetivo} · faltan {faltante}"
+        }
+      ]
+    },
+    {
+      "id": "alertSection",
+      "label": "Insignia de alerta",
+      "elements": [
+        { "id": "showAlertBadge", "type": "CHECKBOX", "label": "Mostrar insignia con % de cumplimiento", "defaultValue": true }
+      ]
+    },
+    {
+      "id": "rangeSection",
+      "label": "Rangos de color (según % de cumplimiento)",
+      "elements": [
+        { "id": "lowColor", "type": "FILL_COLOR", "label": "Color rango bajo", "defaultValue": "#D93025" },
+        { "id": "lowMax", "type": "SLIDER", "label": "Rango bajo: hasta (%)", "defaultValue": 50, "minValue": 0, "maxValue": 100 },
+        { "id": "midColor", "type": "FILL_COLOR", "label": "Color rango medio", "defaultValue": "#F9AB00" },
+        { "id": "midMax", "type": "SLIDER", "label": "Rango medio: hasta (%)", "defaultValue": 90, "minValue": 0, "maxValue": 100 },
+        { "id": "highColor", "type": "FILL_COLOR", "label": "Color rango alto (por encima del medio)", "defaultValue": "#1E8E3E" },
+        { "id": "barColorMode", "type": "SELECT_SINGLE", "label": "Color de la barra", "options": [
+            { "label": "Automático (según rango)", "value": "auto" },
+            { "label": "Fijo", "value": "fijo" }
+          ], "defaultValue": "auto" },
+        { "id": "fixedBarColor", "type": "FILL_COLOR", "label": "Color fijo de la barra (si eliges 'Fijo')", "defaultValue": "#1A73E8" }
+      ]
+    },
+    {
+      "id": "colorSection",
+      "label": "Colores generales",
+      "elements": [
+        { "id": "cardBackgroundColor", "type": "FILL_COLOR", "label": "Color de fondo de la tarjeta", "defaultValue": "#FFFFFF" },
+        { "id": "barTrackColor", "type": "FILL_COLOR", "label": "Color del riel de la barra", "defaultValue": "#F1F3F4" },
+        { "id": "valueColor", "type": "FILL_COLOR", "label": "Color del valor principal", "defaultValue": "#202124" }
+      ]
+    }
+  ],
+  "interactions": []
+}
