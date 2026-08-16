@@ -3,8 +3,8 @@
   "organization": "Francisco Analytics",
   "logoUrl": "https://franciscojim5555-art.github.io/KpiDash/logo.png",
   "description": "Tarjeta KPI que compara un valor actual contra un objetivo, con barra de progreso e insignia de alerta.",
-  "packageUrl": "https://franciscojim5555-art.github.io/KpiDash",
-  "supportUrl": "https://example.com/soporte",
+  "packageUrl": "https://github.com/franciscojim5555-art/KpiDash",
+  "supportUrl": "https://github.com/franciscojim5555-art/KpiDash/issues",
   "components": [
     {
       "id": "kpiObjetivoVsActual",
@@ -12,9 +12,9 @@
       "description": "Tarjeta KPI que compara un valor actual contra un objetivo, con barra de progreso e insignia de alerta.",
       "iconUrl": "https://franciscojim5555-art.github.io/KpiDash/icon.png",
       "resource": {
-        "js": "viz.js",
-        "css": "viz.css",
-        "config": "config.json"
+        "js": "https://franciscojim5555-art.github.io/KpiDash/viz.js",
+        "css": "https://franciscojim5555-art.github.io/KpiDash/viz.css",
+        "config": "https://franciscojim5555-art.github.io/KpiDash/config.json"
       }
     }
   ]
